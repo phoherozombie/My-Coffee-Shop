@@ -9,6 +9,11 @@ class Category extends Model
 {
     // Sử dụng trait HasFactory để hỗ trợ tạo các factory cho model này.
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'description',
+    ];
+
 
     /**
      * Định nghĩa mối quan hệ "1-nhiều" (One-to-Many) giữa Category và Product.
