@@ -9,6 +9,14 @@ class Product extends Model
 {
     // Sử dụng trait HasFactory để hỗ trợ tạo các factory cho model này.
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'description',
+        'price',
+        'currency',
+        'display_image_url',
+        'category_id',
+    ];
 
     /**
      * Hằng số DEFAULT_CURRENCY:
