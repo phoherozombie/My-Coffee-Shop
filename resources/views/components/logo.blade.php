@@ -35,4 +35,7 @@
             </svg>
         </h1>
     </a>
+    @if($hasSetting)
+        <livewire:setting-dropdown />
+    @endif
 </div>
