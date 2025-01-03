@@ -26,4 +26,3 @@ class CartItemModelTest extends TestCase
         $this->assertInstanceOf(Product::class, $cart_item->product);
     }
 }
-

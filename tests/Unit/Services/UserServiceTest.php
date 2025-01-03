@@ -62,4 +62,3 @@ class UserServiceTest extends TestCase
         $this->assertNotSame($john_user_id, $this->user_service->getUserIdFromSession());
     }
 }
-

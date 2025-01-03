@@ -35,9 +35,8 @@ class QueryBuilderPlayground extends Command
             foreach($cateory->products as $product) {
                 dump('--- Product name: '.$product->name);
             }
-            
+
             dump('--------------------------------------------');
         }
     }
 }
-

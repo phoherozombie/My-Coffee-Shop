@@ -38,4 +38,3 @@ class ProductModelTest extends TestCase
         $this->assertSame($expected_results, $product->getFormattedTotalAmount($quantity));
     }
 }
-

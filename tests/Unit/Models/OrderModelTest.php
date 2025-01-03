@@ -29,4 +29,3 @@ class OrderModelTest extends TestCase
         $this->get($path)->assertOk();
     }
 }
-

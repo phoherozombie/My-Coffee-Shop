@@ -73,4 +73,3 @@ class CheckoutControllerTest extends TestCase
         $response->assertRedirectToSignedRoute('orders.complete', ['order' => $order->id]);
     }
 }
-

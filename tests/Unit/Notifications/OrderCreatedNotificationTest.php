@@ -45,4 +45,3 @@ class OrderCreatedNotificationTest extends TestCase
         );
     }
 }
-

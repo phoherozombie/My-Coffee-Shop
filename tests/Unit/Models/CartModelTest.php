@@ -65,4 +65,3 @@ class CartModelTest extends TestCase
         $this->assertSame($expected_formatted_total_amount, $cart->formatted_total_amount);
     }
 }
-

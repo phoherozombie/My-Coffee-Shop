@@ -141,4 +141,3 @@ class CartServiceTest extends TestCase
         $this->assertSame($cart_item->quantity, $cart_item_data['quantity']);
     }
 }
-

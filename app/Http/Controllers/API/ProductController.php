@@ -1,9 +1,12 @@
 <?php
+
 namespace App\Http\Controllers\API;
+
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Database\Query\Builder;
+
 class ProductController extends Controller
 {
     /**
@@ -18,8 +21,10 @@ class ProductController extends Controller
             ->when(request('search'), function(Builder $query, $search) {
                 return $query->where('name', 'like', '%'.$search);
             });
+
         return $query->simplePaginate();
     }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -33,16 +38,20 @@ class ProductController extends Controller
             'display_image_url' => 'required|url',
             'category_id' => 'required|exists:categories',
         ]);
+
         return Product::create($validated);
     }
+
     /**
      * Display the specified resource.
      */
     public function show(Product $product)
     {
         $product->loadMissing(explode(',', request('with', '')));
+
         return $product;
     }
+
     /**
      * Update the specified resource in storage.
      */
@@ -56,15 +65,19 @@ class ProductController extends Controller
             'display_image_url' => 'nullable|url',
             'category_id' => 'nullable|exists:categories,id',
         ]);
+
         $product->update($validated);
+
         return $product;
     }
+
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Product $product)
     {
         $product->delete();
+
         return $product;
     }
 }
